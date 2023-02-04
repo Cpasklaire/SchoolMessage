@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} - Créé un compte{% endblock %}
+
+{% block body %}
+  <section class="">
+    <h2>Inscription</h2>
+    {{ form_start(form) }}
+      {{ form_row(form.pseudo) }}
+      {{ form_row(form.password, {'label' : 'Mot de passe'}) }}
+      <button type="submit" class="">Créer</button>
+    {{ form_end(form) }}
+  </section>
+{% endblock %}

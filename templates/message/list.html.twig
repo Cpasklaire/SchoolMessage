@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}- liste{% endblock %}
+
+{% block body %}
+<a href="{{ path('new') }}">créé un message</a>
+<a href="{{ path('draftList') }}">Brouillons</a>
+{% for message in messages %}
+{{message.subjet}}
+{% endfor %}
+{% endblock %}
