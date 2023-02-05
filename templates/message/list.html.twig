@@ -6,6 +6,6 @@
 <a href="{{ path('new') }}">créé un message</a>
 <a href="{{ path('draftList') }}">Brouillons</a>
 {% for message in messages %}
-{{message.subjet}}
+<h3>{{message.subjet}}</h3>
 {% endfor %}
 {% endblock %}
