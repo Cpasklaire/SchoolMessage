@@ -26,8 +26,8 @@ class MessageControllerTest extends WebTestCase
     {
         $crawler = $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate('list'));
         $this->assertResponseIsSuccessful();
-        $this->assertCount(1, $crawler->filter('h3:contains("' . "message1" . '")'));
-        $this->assertCount(1, $crawler->filter('h3:contains("' . "message2" . '")'));
+        $this->assertCount(2, $crawler->filter('h3:contains("message1")'));
+        $this->assertCount(2, $crawler->filter('h3:contains("' . "message2" . '")'));
         $this->assertCount(0, $crawler->filter('h3:contains("' . "message3" . '")'));
     }
     public function testDraftList()
@@ -36,7 +36,7 @@ class MessageControllerTest extends WebTestCase
         $this->assertResponseIsSuccessful();
         $this->assertCount(0, $crawler->filter('h3:contains("' . "message1" . '")'));
         $this->assertCount(0, $crawler->filter('h3:contains("' . "message2" . '")'));
-        $this->assertCount(1, $crawler->filter('h3:contains("' . "message3" . '")'));
+        $this->assertCount(2, $crawler->filter('h3:contains("' . "message3" . '")'));
     }
     public function testFormMessage()
     {

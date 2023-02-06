@@ -1,0 +1,29 @@
+.home {
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    .contenaire {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        .column {       
+            background-color: #d3cabe;
+            padding: 3%;
+            border-radius: 50px;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 300px;
+            h2 {
+                font-size: 2em;
+                margin-bottom: 10%;
+            }
+        }
+    }
+}

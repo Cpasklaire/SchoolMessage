@@ -1,0 +1,13 @@
+{% block overlay %}
+    <div id="message{{message.id}}" class="overlay">
+      <div class="popup">
+        <h3>{{message.subjet}}</h3>  
+        <h4>Destinataire : {{message.recipient}}</h4>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          {{message.text}}
+        </div>
+
+      </div>
+    </div>
+{% endblock %}

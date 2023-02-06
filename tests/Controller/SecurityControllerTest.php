@@ -40,8 +40,8 @@ class SecurityControllerTest extends WebTestCase
             $this->assertResponseIsSuccessful();
             $this->assertSelectorTextContains('h2', 'Connexion');
             $this->assertSelectorExists('form[action="/connection"][method="post"]');
-            $this->assertSelectorExists('input[placeholder="Pseudo"][type="text"][name="_username"]');
-            $this->assertSelectorExists('input[placeholder="Mot de passe"][type="password"][name="_password"]');
+            $this->assertSelectorExists('input[type="text"][name="_username"]');
+            $this->assertSelectorExists('input[type="password"][name="_password"]');
             $this->assertSelectorExists('button[type="submit"]');
         }
     }

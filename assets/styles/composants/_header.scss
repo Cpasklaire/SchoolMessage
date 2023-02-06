@@ -1,0 +1,16 @@
+header {
+    background-size: cover;   
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    h1 {
+        font-size: 5em;
+    }
+    a {
+        color: white;
+        font-size: 2em;
+    }
+}
