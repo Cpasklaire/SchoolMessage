@@ -3,6 +3,17 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-<a href="{{ path('login') }}">Connection</a>
-<a href="{{ path('registration') }}">Créer un compte</a>
+<section class="home">
+    <div class="contenaire">
+        <div class="column">
+            <h2>Heureux de vous revoir !</h2>
+            <a href="{{ path('login') }}" class="bouton">Connection</a>
+        </div>
+        <div class="column">
+            <h2>Pas encore inscrit ?</h2>
+            <a href="{{ path('registration') }}" class="bouton">Créer un compte</a>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

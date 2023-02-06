@@ -1,0 +1,44 @@
+.list {
+    margin: 3%;
+    .liens {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin-bottom: 3%;
+    }    
+    .mess {
+        border: 3px solid #776847;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 3%;
+        .article {
+            width: 30%;
+            background-color: #d3cabe;
+            padding: 3%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            height: 100px;
+            
+    p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+    }
+        }    
+        h3 {
+            font-size: 2em;
+            margin-bottom: 3%;
+            color: #104235;
+        }
+        
+    }
+    
+}

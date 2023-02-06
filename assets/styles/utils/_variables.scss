@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
+$font-titre: 'Finger Paint';
+$font-texte: 'Balthazar';
+
+$couleur-primaire1: #104235;
+$couleur-primaire2: #2a7668;
+$couleur-secondaire1: #776847; 
+$couleur-secondaire2: #d3cabe; 
+$couleur-pick: #b7bb33;
+
+*
+{
+  font-family: $font-texte;
+  color: black;
+  
+}
+
+h1, h2, h3 {
+    font-family: $font-titre;
+    color: white;
+}

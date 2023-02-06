@@ -3,17 +3,15 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    <section class="">
+    <section class="form">
         <h2>Connexion</h2>
 
         <form action="{{ path('login') }}" method="post">
-            <div class="">
-                <span>Votre pseudo</span>
-                <input placeholder="Pseudo" type="text" class="" required name="_username">
-                <span>Votre mot de passe</span>
-                <input placeholder="Mot de passe" type="password" class="" required name="_password">
-                <button type="submit" class="">connection</button>
-            </div>
+                <label>Votre pseudo</label>
+                <input type="text" required name="_username">
+                <label>Votre mot de passe</label>
+                <input type="password" required name="_password">
+                <button type="submit" class="bouton">connection</button>
         </form>
     </section>
 {% endblock %}

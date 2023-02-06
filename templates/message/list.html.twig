@@ -1,11 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}- liste{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-<a href="{{ path('new') }}">créé un message</a>
-<a href="{{ path('draftList') }}">Brouillons</a>
-{% for message in messages %}
-{{message.subjet}}
-{% endfor %}
+    <section class="list">
+        <div class="liens">
+            <a href="{{ path('new') }}" class="bouton">Créé un message</a>
+            {% if app.request.attributes.get('_route') == 'list' %}
+                <a href="{{ path('draftList') }}" class="bouton">Brouillons</a>
+            {% elseif app.request.attributes.get('_route') == 'draftList' %}
+                <a href="{{ path('list') }}" class="bouton">Message envoyés</a>
+            {% endif %}
+        </div>
+        <div class="mess">
+        {% if messages|length == null %}
+            {% if app.request.attributes.get('_route') == 'list' %}
+                <h3>Vous n'avez pas encore envoyer de message</h3>
+            {% elseif app.request.attributes.get('_route') == 'draftList' %}
+                <h3>Pas de brouillons</h3>
+            {% endif %}
+        
+        {% else %}
+            {% for message in messages %}
+                {% if app.request.attributes.get('_route') == 'list' %}
+                <a class="article" href="#message{{message.id}}">
+                {% elseif app.request.attributes.get('_route') == 'draftList' %}
+                    <a class="article" href="{{ path('edit', {'id': message.id}) }}">
+                {% endif %}
+                    <h3>{{message.subjet}}</h3>
+                    <p>{{message.text}}</p>
+                </a>    
+                {% block overlay %}
+                    {% include "overlay.html.twig" with {'message': message } %}
+                {% endblock %} 
+            {% endfor %}
+        {% endif %}
+        </div>
+
+ 
+    </section>
 {% endblock %}

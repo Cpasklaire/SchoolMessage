@@ -3,14 +3,16 @@
 {% block title %} - Nouveau message{% endblock %}
 
 {% block body %}
-  <section class="">
-    <h2>nouveau message</h2>
+  <section class="form">
+    <h2>Nouveau message</h2>
     {{ form_start(form) }}
-      {{ form_row(form.subjet) }}
-      {{ form_row(form.text)}}
-      {{ form_row(form.recipient) }}
-      <button type="submit" name="save" value=""class="">Abandonner</button>
-      <button type="submit" name="send" value="send" class="">Envoyer</button>
+      {{ form_row(form.subjet, {'label' : 'Objet'}) }}
+      {{ form_row(form.recipient, {'label' : 'Destinataire'}) }}
+      {{ form_row(form.text, {'label' : 'Message'}) }}
+      <div class="boite">
+        <button type="submit" name="save" value=""class="bouton">Abandonner</button>
+        <button type="submit" name="send" value="send" class="bouton">Envoyer</button>
+      </div>
     {{ form_end(form) }}
   </section>
 {% endblock %}

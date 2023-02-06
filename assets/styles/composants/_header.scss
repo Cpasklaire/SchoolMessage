@@ -1,0 +1,39 @@
+header {
+    background-size: cover;   
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    h1 {
+        font-size: 5em;
+    }
+    a {
+        color: white;
+        font-size: 2em;
+    }
+}
+.flash {
+    margin: 0px auto;
+    padding: 20px;
+    background: #b7bb33;
+    border-radius: 5px;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    animation: fadeOut 5s;
+    visibility: hidden;
+}
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

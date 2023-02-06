@@ -20,7 +20,7 @@ class MessageController extends AbstractController
     public function list(MessageRepository $messagerepo, Security $security): Response
     {
         $user = $security->getUser();
-        $messages = $messagerepo->findBy(['userSender' => $user,'sent' => true]);
+        $messages = $messagerepo->findBy(['userSender' => $user,'sent' => 1]);
         return $this->render('message/list.html.twig', [
             'messages' => $messages,
         ]);
@@ -30,8 +30,8 @@ class MessageController extends AbstractController
     public function draftList(MessageRepository $messagerepo, Security $security): Response
     {
         $user = $security->getUser();
-        $messages = $messagerepo->findBy(['userSender' => $user,'sent' => false]);
-        return $this->render('message/draft.html.twig', [
+        $messages = $messagerepo->findBy(['userSender' => $user,'sent' => 0]);
+        return $this->render('message/list.html.twig', [
             'messages' => $messages,
         ]);
     }
