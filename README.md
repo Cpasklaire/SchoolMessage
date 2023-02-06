@@ -34,7 +34,7 @@ symfony server:start
 ​
 # Thanks
 ​
-- <a href="https://iconscout.com/icons/envelope-open" target="_blank">Envelope Open Icon</a> by <a href="https://iconscout.com/contributors/latesticon" target="_blank">Latest Icon</a>
+<a href="https://iconscout.com/icons/envelope-open" target="_blank">Envelope Open Icon</a> by <a href="https://iconscout.com/contributors/latesticon" target="_blank">Latest Icon</a>
 
 # Possible follow-up
 - Gestion des erreur d'entré dans le formulaire
