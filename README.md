@@ -1,6 +1,7 @@
 # SchoolMessage
 Site de gestion d'envoie de mail
-​Temps de réalisation environ : 10h pour un site fonctionnelle + 5h pour le front
+​Temps de réalisation environ : 10h pour un site fonctionnelle + 5h pour le front + quelques heure pour l'inspiration 
+
 # Require
 ​
 - Symfony 6 (and CLI)
